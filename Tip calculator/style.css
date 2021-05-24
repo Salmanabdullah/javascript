@@ -1,0 +1,34 @@
+#calc{
+    background-color: #8caba8;
+    width: 350px;
+    height: 300px;
+    color: white;
+    padding: 55px;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 50px;
+    border-style: none;
+}
+input{
+    float: right;
+    clear: both;
+    width: 125px;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+p{
+    font-size: 25px;
+}
+#addup{
+    background-color:white;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 125px;
+    height: 25px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+}
