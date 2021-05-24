@@ -1,1 +1,20 @@
 
+#banner{
+    color:#cbb2ca ;
+    background-color:#7b3c58 ;
+    width: 50%;
+    font-size: 80px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10% auto 0%;
+}
+
+#clock{
+background-color: #46afd7;
+color: white;
+width: 50%;
+font-size: 200px;
+padding: 0.5em 0em;
+margin: 0px auto;
+text-align: center;
+}
