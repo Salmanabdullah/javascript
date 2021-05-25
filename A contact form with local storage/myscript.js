@@ -7,7 +7,7 @@ $(document).ready(function(){
             $('#email').val(localStorage['email']);
         }
         if(localStorage['message']){
-            $('message').val(localStorage['message']);
+            $('#message').val(localStorage['message']);
         }
     }
     init();
