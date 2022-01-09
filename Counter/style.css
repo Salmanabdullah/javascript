@@ -145,11 +145,6 @@ p {
     width: 95vw;
   }
 }
-main {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-}
 
 /*
 =============== 
@@ -165,7 +160,7 @@ main {
 .container {
   text-align: center;
 }
-#value {
+.value {
   font-size: 6rem;
   font-weight: bold;
 }
@@ -186,5 +181,5 @@ main {
 }
 .btn:hover {
   color: var(--clr-white);
-  background: var(--clr-black);
+  background: green;
 }
