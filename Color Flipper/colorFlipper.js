@@ -1,8 +1,14 @@
 const colors =["green","red","blue","yellow"];
-const button = document.getElementById("button");
+const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
 
-button.addEventListener('click',function(){
-    const randomNumber = 2;
-    document.body.style.backgroundColor =colors[randomNumber]
-})
+btn.addEventListener('click',function(){
+    // select color randomly from colors
+    const randomNumber = getRandomNumber();
+    document.body.style.backgroundColor =colors[randomNumber];
+    color.textContent = colors[randomNumber];
+});
+
+function getRandomNumber(){
+    return Math.floor(Math.random() * colors.length);
+}
