@@ -1,4 +1,4 @@
-//set initail count
+//set initial count
 let count = 0;
 
 //set value and buttons
@@ -9,21 +9,21 @@ const btns = document.querySelectorAll('.btn');
 btns.forEach(function(btn){   
  btn.addEventListener('click', function(e){
      //accessing event object
-    const styles = e.target.classList;
+    const sty = e.target.classList;
 
     //select specific classes
-    if (styles.contains('decrease')) {
+    if (sty.contains('decrease')) {
         count--;
-    } else if(styles.contains('increase')){
+    } else if(sty.contains('increase')){
         count++;
     } else {
         count = 0;
     }
     if (count > 0){
-        value.style.color = 'green'
+        value.style.color = 'green';
     }
     else if (count < 0){
-        value.style.color = 'red'
+        value.style.color = 'red';
     }
     else{
         value.style.color = 'black'
