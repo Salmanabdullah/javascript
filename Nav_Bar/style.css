@@ -174,11 +174,76 @@ nav{
     border-color: transparent;
     transition: var(--transition);
     cursor: pointer;
+    margin-top: -60px;
 }
 .nav-toggle:hover {
     color: var(--clr-primary-1);
     transform: rotate(90deg);
 }
 .logo {
-    height: 200px;
+    height: 160px;
+    margin-left: -40px;
+    margin-top: -60px;
+}
+.links a {
+  color: var(--clr-grey-3);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.links a:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.5rem;
+  
+}
+.icons {
+  display: none;
+}
+@media screen and (min-width:800px){
+  .nav-center{
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header{
+    padding: 0;
+  }
+  .nav-toggle{
+    display: none;
+  }
+  .logo {
+    margin-top: -20px;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover{
+    padding: 0;
+    background: transparent;
+    color: var(--clr-primary-5);
+
+  }
+  .icons {
+    display: flex;
+  }
+  .icons a {
+    margin: 0 0.5rem;
+    color: var(--clr-grey-5);
+    transition: var(--transition);
+  }
+  .icons a:hover {
+    color: var(--clr-primary-1);
+  }
 }
