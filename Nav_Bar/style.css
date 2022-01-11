@@ -174,7 +174,7 @@ nav{
     border-color: transparent;
     transition: var(--transition);
     cursor: pointer;
-    margin-top: -60px;
+    margin-top: -10px;
 }
 .nav-toggle:hover {
     color: var(--clr-primary-1);
@@ -184,6 +184,7 @@ nav{
     height: 160px;
     margin-left: -40px;
     margin-top: -60px;
+    margin-bottom: -40px;
 }
 .links a {
   color: var(--clr-grey-3);
@@ -203,6 +204,16 @@ nav{
 .icons {
   display: none;
 }
+.links {
+  height: 0;
+  overflow: hidden;
+  /* to hide the links for the smaller screen */
+  transition: var(--transition);
+}
+/* this class is generated in the navbar.js file */
+.show-links {
+  height: 10rem;
+}
 @media screen and (min-width:800px){
   .nav-center{
     max-width: 1170px;
@@ -219,7 +230,8 @@ nav{
     display: none;
   }
   .logo {
-    margin-top: -20px;
+    margin-top: -50px;
+    margin-left: -80px;
   }
   .links {
     height: auto;
@@ -244,6 +256,6 @@ nav{
     transition: var(--transition);
   }
   .icons a:hover {
-    color: var(--clr-primary-1);
+    color: var(--clr-grey-9);
   }
 }
