@@ -158,92 +158,100 @@ Side_Bar
 ===============
 */
 .side-toggle {
-    position: fixed;
-    font-size: 1.5rem;
-    background: transparent;
-    border-color: transparent;
-    transition: var(--transition);
-    float: right;
-    margin: 2rem;
-    cursor: pointer;
-    color: var(--clr-primary-5);
-    animation: bounce 2s ease-in-out infinite; 
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  float: right;
+  margin: 2rem;
+  cursor: pointer;
+  color: var(--clr-primary-5);
+  animation: bounce 2s infinite; 
 }
 @keyframes bounce {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.5);
+  }
+  100% {
+      transform: scale(1);
+  }
 }
 .side-toggle:hover{
-    color: var(--clr-primary-7);
+  color: var(--clr-primary-7);
 }
 .side-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .close-btn {
-    font-size: 1.5rem;
-    background: transparent;
-    border-color: transparent;
-    color: var(--clr-primary-7);
-    transition: var(--transition);
-    cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-7);
+  transition: var(--transition);
+  cursor: pointer;
 
 }
 .close-btn:hover {
-    color: var(--clr-red-light);
-    transform: rotate(360deg);
+  color: var(--clr-red-light);
+  transform: rotate(360deg);
 }
 .logo {
-    justify-self: center;
-    height: 160px;
-    margin-left: -20px;
-    margin-top: -40px;
-    margin-bottom: -40px;
+  justify-self: center;
+  height: 160px;
+  margin-left: -20px;
+  margin-top: -40px;
+  margin-bottom: -40px;
 }
 .links a {
-    display: block;
-    font-size: 1.5rem;
-    text-transform: capitalize;
-    padding: 1rem 1.5rem;
-    color: var(--clr-grey-5);
-    transition: var(--transition);
-  }
+  display: block;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 1rem 1.5rem;
+  color: var(--clr-grey-5);
+  transition: var(--transition);
+}
 .links a:hover {
-    background: var(--clr-primary-8);
-    color: var(--clr-primary-5);
-    padding-left: 1.75rem;
-  }
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.75rem;
+}
 .icons {
-    justify-self: center;
-    display: flex;
-    padding-bottom: 2rem;
-  }
+  justify-self: center;
+  display: flex;
+  padding-bottom: 2rem;
+}
 .icons a {
-    font-size: 1.5rem;
-    margin: 0 0.5rem;
-    color: var(--clr-primary-5);
-    transition: var(--transition);
-  }
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  color: var(--clr-primary-5);
+  transition: var(--transition);
+}
 .icons a:hover {
-    color: var(--clr-primary-1);
-  }
+  color: var(--clr-primary-1);
+}
 .side {
-    background: var(--clr-white);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    row-gap: 1rem;
-    transition: var(--transition);
-    box-shadow: var(--clr-red-dark);
-    /* transform: translate(-100%); */
+  background: var(--clr-white);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--clr-red-dark);
+  transform: translate(-100%);
+}
+.show-sidebar {
+  transform: translate(0);
+}
+@media screen and (min-width: 676px) {
+  .side {
+    width: 400px;
+  }
 }
