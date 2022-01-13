@@ -165,7 +165,7 @@ main {
 }
 .banner {
   background: var(--clr-white);
-  border-radius: var(--radius);
+  border-radius: 2rem;
   box-shadow: var(--light-shadow);
   text-align: center;
   padding: 4rem 0;
@@ -203,7 +203,7 @@ main {
 }
 .modal-container {
   background: var(--clr-white);
-  border-radius: var(--radius);
+  border-radius: 0.3rem;
   width: 90vw;
   height: 32vh;
   max-width: var(--fixed-width);
