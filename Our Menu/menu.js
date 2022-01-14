@@ -4,7 +4,7 @@ const menu = [
       title: "beef burger",
       category: "breakfast",
       price: 15.99,
-      img: "./images/menu-item.jpeg",
+      img: "./images/item-1.jpg",
       desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
     },
     {
@@ -12,7 +12,7 @@ const menu = [
       title: "beef burger",
       category: "breakfast",
       price: 15.99,
-      img: "./images/menu-item.jpeg",
+      img: "./images/item-1.jpg",
       desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
     },
     {
@@ -20,7 +20,7 @@ const menu = [
       title: "beef burger",
       category: "breakfast",
       price: 15.99,
-      img: "./images/menu-item.jpeg",
+      img: "./images/item-1.jpg",
       desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
     },
     {
@@ -28,7 +28,7 @@ const menu = [
       title: "beef burger",
       category: "breakfast",
       price: 15.99,
-      img: "./images/menu-item.jpeg",
+      img: "./images/item-1.jpg",
       desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
     },
     {
@@ -36,7 +36,7 @@ const menu = [
       title: "beef burger",
       category: "breakfast",
       price: 15.99,
-      img: "./images/menu-item.jpeg",
+      img: "./images/item-1.jpg",
       desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
     },
   ];
