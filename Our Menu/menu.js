@@ -50,24 +50,48 @@ const parentItem = document.querySelector('.section-center');
 
 //target the whole page using window and then listen to DOMContentLoaded
 // then call a callback function
-window.addEventListener('DOMContentLoaded', function(){
-  // console.log("hey there");
   // map method to iterate through each item of the array 
   // also i can change items using map
-  let displayMenu = menu.map(function(item) {
-    // return `<h1>${item.title}</h1>`; // returns title of every items
+
+// window.addEventListener('DOMContentLoaded', function(){
+//   let displayMenu = menu.map(function(item) {
+//       // return `<h1>${item.title}</h1>`; // returns title of every items
+//     return `<article class="menu-item">
+//     <img src=${item.img} alt=${item.title} class="photo">
+//     <div class="item-info">
+//         <header>
+//             <h4>${item.title}</h4>
+//             <h4 class="price">&euro;${item.price}</h4>
+//         </header>
+//         <p class="item-description">${item.desc}</p>
+//     </div>
+// </article>`;
+//   });
+//   displayMenu = displayMenu.join('');
+//   parentItem.innerHTML = displayMenu;
+// })
+
+// lets keep the map method in a function so that it can be used again
+
+window.addEventListener('DOMContentLoaded', function(){
+  displayMenuItems(menu);
+});
+
+function displayMenuItems(items){
+  items = items.map(function(item){
     return `<article class="menu-item">
-    <img src=${item.img} alt=${item.title} class="photo">
-    <div class="item-info">
-        <header>
+        <img src=${item.img} alt=${item.title} class="photo">
+          <div class="item-info">
+          <header>
             <h4>${item.title}</h4>
             <h4 class="price">&euro;${item.price}</h4>
-        </header>
-        <p class="item-description">${item.desc}</p>
-    </div>
-</article>`;
+          </header>
+          <p class="item-description">
+          ${item.desc}
+          </p>
+          </div>
+        </article>`;
   });
-  displayMenu = displayMenu.join('');
-  // console.log(displayMenu);
-  parentItem.innerHTML = displayMenu;
-})
+  items = items.join('');
+  parentItem.innerHTML = items;
+}
