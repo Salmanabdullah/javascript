@@ -131,6 +131,7 @@ function displayMenuItems(items){
 }
 
   //using forEach method on .filter-btn. on button click using dataset give catagory
+  // to display specific iteam
   //items a common name. Then make an ''array of caragory' from menu array using
   //filter method.
 
