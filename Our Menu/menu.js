@@ -73,12 +73,21 @@ const menu = [
       img: "./images/item-1.jpg",
       desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
     },
+    {
+      id: 10,
+      title: "kabab",
+      category: "Kabab",
+      price: 20.99,
+      img: "./images/item-1.jpg",
+      desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+    },
   ];
 
   // when my page loads i need to call a callback function
   // so i have selected the parent class for all the menu items
 
 const parentItem = document.querySelector('.section-center');
+const btnsContainer = document.querySelector('.button-container')
 
   //target the whole page using window and then listen to DOMContentLoaded
   // then call a callback function
@@ -109,7 +118,40 @@ const parentItem = document.querySelector('.section-center');
 
 window.addEventListener('DOMContentLoaded', function(){
   displayMenuItems(menu);
+  const categories = menu.reduce(function(values,item){
+    if (!values.includes(item.category)){
+      values.push(item.category);
+    }
+    return values;
+  },['all']);
+    console.log(categories);
+    let categoryItems = categories.map(function(category){
+      return `<button class="filter-btn" type="button" data-id=${category}>${category}</button>`;
+    })
+    categoryItems = categoryItems.join('')
+    btnsContainer.innerHTML = categoryItems;
+    //using forEach method on .filter-btn. on button click using dataset give catagory
+    // to display specific iteam
+    //items a common name. Then make an ''array of caragory' from menu array using
+    //filter method.
+    const filterBtn = document.querySelectorAll('.filter-btn');
+    filterBtn.forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        const catagory = e.currentTarget.dataset.id;
+        const catagoryArray = menu.filter(function(menuItem){
+          if (menuItem.category === catagory){
+            return menuItem;
+          }
+        });
+        if (catagory === 'all'){
+          displayMenuItems(menu);
+        } else {
+          displayMenuItems(catagoryArray);
+        }
+      })
+    })
 });
+
 
 function displayMenuItems(items){
   items = items.map(function(item){
@@ -130,24 +172,7 @@ function displayMenuItems(items){
   parentItem.innerHTML = items;
 }
 
-  //using forEach method on .filter-btn. on button click using dataset give catagory
-  // to display specific iteam
-  //items a common name. Then make an ''array of caragory' from menu array using
-  //filter method.
+  
 
-const filterBtn = document.querySelectorAll('.filter-btn');
-filterBtn.forEach(function(btn){
-  btn.addEventListener('click', function(e){
-    const catagory = e.currentTarget.dataset.id;
-    const catagoryArray = menu.filter(function(menuItem){
-      if (menuItem.category === catagory){
-        return menuItem;
-      }
-    });
-    if (catagory === 'all'){
-      displayMenuItems(menu);
-    } else {
-      displayMenuItems(catagoryArray);
-    }
-  })
-})
+
+  
