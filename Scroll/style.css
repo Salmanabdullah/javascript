@@ -176,6 +176,10 @@ main {
     scroll
 ===============
 */
+nav {
+    background: var(--clr-white);
+    padding: 1rem 1.5rem;
+}
 .logo {
     height: 100px;
 }
@@ -195,10 +199,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 .links-container {
     height: 0;
-    overflow: hidden;
+    overflow: visible;
     transition: var(--transition);
 }
 .links a {
@@ -217,21 +222,32 @@ main {
 }
 
 @media screen and (min-width: 800px){
+    nav {
+        background: transparent;
+        width: 90vw;
+        max-width: 1170px;
+        margin: 0 auto;
+        margin-left: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .nav-header {
         padding: 0;
     }
-      .nav-toggle {
+    .nav-toggle {
         display: none;
     }
     .links-container {
-        height: auto !important;
+        height: auto ;
       }
     .links {
         display: flex;
+        margin-right: -80px;
     }
     .links a {
         background: transparent;
-        color: var(--clr-white);
+        color: #1a2422;
         font-size: 1.1rem;
         text-transform: capitalize;
         letter-spacing: var(--spacing);
@@ -243,5 +259,33 @@ main {
     }
     .links a:hover {
         color: var(--clr-white);
+    }
+}
+/* hero */
+header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(133, 219, 110, 0.5), rgba(0, 0, 0, 0.7)),
+      url(./hero_image.jpg) center/cover no-repeat;
+}
+.banner {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.container h1 {
+    color: var(--clr-white);
+    text-transform: capitalize;
+}
+.container p {
+    color: var(--clr-white);
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+    .container p {
+      max-width: 40rem;
     }
 }
