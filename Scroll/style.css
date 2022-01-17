@@ -208,7 +208,7 @@ nav {
     transition: var(--transition);
 }
 .show-links {
-  height: 200px;
+  height: auto;
 }
 .links a {
     background: var(--clr-white);
@@ -224,7 +224,22 @@ nav {
 .links a:hover {
     color: blue;
 }
-
+/* changed nav */
+.changed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 2250px;
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+}
+.changed-nav .links a {
+  color: var(--clr-grey-1);
+}
+.changed-nav .links a:hover {
+  color: var(--clr-secondary);
+}
 
 @media screen and (min-width: 800px){
     nav {
@@ -247,7 +262,7 @@ nav {
     }
     .links {
         display: flex;
-        margin-right: -10px;
+        /* margin-right: -10px; */
     }
     .links a {
         background: transparent;
@@ -339,6 +354,7 @@ footer p {
 .show-arrow-sign {
   visibility: visible;
   z-index: 100;
+  color: blue;
 }
 
 @keyframes bounce {
