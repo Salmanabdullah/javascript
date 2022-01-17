@@ -182,6 +182,7 @@ nav {
 }
 .logo {
     height: 100px;
+    margin-left: -22px;
 }
 .nav-toggle {
     font-size: 1.5rem;
@@ -190,7 +191,7 @@ nav {
     border-color: transparent;
     transition: var(--transition);
     cursor: pointer;
-    margin-right: 20px; /*new*/
+    /* margin-right: 20px; */
 }
 .nav-toggle:hover {
     color: var(--clr-secondary);
@@ -203,12 +204,15 @@ nav {
 }
 .links-container {
     height: 0;
-    overflow: visible;
+    overflow: hidden;
     transition: var(--transition);
 }
+.show-links {
+  height: 200px;
+}
 .links a {
-    background: #bef7ec;
-    color: #1a2422;
+    background: var(--clr-white);
+    color: var(--clr-grey-5);
     font-size: 1.1rem;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
@@ -221,13 +225,13 @@ nav {
     color: blue;
 }
 
+
 @media screen and (min-width: 800px){
     nav {
         background: transparent;
         width: 90vw;
         max-width: 1170px;
         margin: 0 auto;
-        margin-left: -10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -240,10 +244,10 @@ nav {
     }
     .links-container {
         height: auto ;
-      }
+    }
     .links {
         display: flex;
-        margin-right: -80px;
+        margin-right: -10px;
     }
     .links a {
         background: transparent;
@@ -288,4 +292,63 @@ header {
     .container p {
       max-width: 40rem;
     }
+}
+/* sections and title */
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.title span {
+  color: var(--clr-secondary);
+}
+#about,
+#services,
+#tours {
+  height: 80vh;
+}
+#services {
+  background: var(--clr-white);
+}
+footer {
+  background: var(--clr-grey-1);
+  padding: 5rem 1rem;
+}
+footer p {
+  color: var(--clr-white);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  margin-bottom: 0;
+}
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: var(--clr-secondary);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  color: var(--clr-white);
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+}
+.show-arrow-sign {
+  visibility: visible;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
