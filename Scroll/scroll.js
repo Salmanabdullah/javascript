@@ -10,3 +10,18 @@ const links = document.querySelector('.links');
 toggleBtn.addEventListener('click', function(){
     linksContainer.classList.toggle('show-links')
 })
+const navBar = document.getElementById('nav');
+const topLink = document.querySelector('.top-link');
+
+window.addEventListener('scroll', function(){
+    const scrollHeight = window.scrollY;
+    const navHeight = navBar.getBoundingClientRect().height;
+    if(scrollHeight > navHeight){
+        navBar.classList.add('changed-nav');
+        topLink.classList.add('show-arrow-sign')
+    } else {
+        navBar.classList.remove('changed-nav')
+        topLink.classList.remove('show-arrow-sign')
+    }
+
+})
