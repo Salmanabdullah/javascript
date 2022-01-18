@@ -23,5 +23,12 @@ window.addEventListener('scroll', function(){
         navBar.classList.remove('changed-nav')
         topLink.classList.remove('show-arrow-sign')
     }
-
+})
+const scrolling = document.querySelectorAll('.scroll-link')
+scrolling.forEach(function(link){
+    link.addEventListener('click',function(e){
+        e.preventDefault();
+        const linksTarget = e.currentTarget.getAttribute('href');
+        console.log(linksTarget);
+    })
 })
