@@ -170,6 +170,9 @@ main {
     display: grid;
     place-items: center;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 /*
 =============== 
@@ -338,9 +341,9 @@ footer p {
 .top-link {
   font-size: 1.25rem;
   position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  background: var(--clr-secondary);
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--clr-grey-8);
   width: 2rem;
   height: 2rem;
   display: grid;
@@ -354,7 +357,8 @@ footer p {
 .show-arrow-sign {
   visibility: visible;
   z-index: 100;
-  color: blue;
+  color: rgb(37, 37, 85);
+
 }
 
 @keyframes bounce {
