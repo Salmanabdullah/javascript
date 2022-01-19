@@ -36,7 +36,13 @@ const giveway = document.querySelector('.giveway');
 const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
 
-let givewayDate = new Date(2022, 1, 10, 16, 30, 0);
+let tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth();
+let tempDay = tempDate.getDate();
+
+const givewayDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
+// let givewayDate = new Date(2022, 0, 10, 16, 30, 0);
 // console.log(givewayDate);
 
 const year = givewayDate.getFullYear();
