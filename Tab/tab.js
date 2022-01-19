@@ -18,7 +18,8 @@ about.addEventListener('click', function(e){
             f.classList.remove('active');
         })
         //add active class
-        const content = document.getElementById(id);
-        content.classList.add('active');
+        document.getElementById(id).classList.add('active')
+        // const content = document.getElementById(id);
+        // content.classList.add('active');
     }
 })
