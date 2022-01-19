@@ -224,7 +224,7 @@ main {
     letter-spacing: 2px;
     font-size: 0.85rem;
   }
-  .deadline h4:not(.expired) {
+  .deadline h4 {
     font-size: 2rem;
     margin-bottom: 0.25rem;
     letter-spacing: var(--spacing);
