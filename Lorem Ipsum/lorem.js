@@ -26,7 +26,7 @@ form.addEventListener('submit', function(e){
        let userInput = text.slice(0,value);
        userInput = userInput.map(function(item){
            return `<p class = 'result'>${item}</p>`
-       }).join();
+       }).join('');
        result.innerHTML = userInput;
     }
 })
