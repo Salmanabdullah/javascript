@@ -6,6 +6,7 @@
  * use an array of day, hour, min and sec to call the values and add in the innerHTML
  * add a zero if it goes below 10
  * use setInterval method to refresh the time automatically
+ * set what happens when the offer expires
 */
 const months = [
     'January',
@@ -35,7 +36,7 @@ const giveway = document.querySelector('.giveway');
 const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
 
-let givewayDate = new Date(2022, 1, 11, 18, 30, 0);
+let givewayDate = new Date(2022, 1, 10, 16, 30, 0);
 // console.log(givewayDate);
 
 const year = givewayDate.getFullYear();
@@ -90,6 +91,11 @@ function remainingTime(){
   items.forEach(function(item,index){
     item.innerHTML = format(values[index]);
   })
+  // when the time expires
+  if(totalTime < 0){
+    clearInterval(countdown);
+    deadline.innerHTML = `<h4>The offer has expired.</h4> `
+  }
 }
 //countdown
 let countdown = setInterval(remainingTime,1000)
