@@ -47,8 +47,8 @@ Variables
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
@@ -162,7 +162,8 @@ p {
 .section-center {
   width: 90vw;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 35rem;
+  margin-top: 8rem;
 }
 @media screen and (min-width: 992px) {
   .section-center {
@@ -242,4 +243,67 @@ main {
 }
 .show-container {
     visibility: visible;
+}
+.grocery-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+    padding: 0.25rem 1rem;
+    border-radius: var(--radius);
+    text-transform: capitalize;
+}
+.grocery-item:hover {
+    color: var(--clr-grey-5);
+    background: var(--clr-grey-10);
+}
+.grocery-item:hover .title {
+    color: var(--clr-grey-5);
+}
+.title {
+    margin-bottom: 0;
+    color: var(--clr-grey-1);
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+.edit-btn,
+.delete-btn {
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 0.7rem;
+    margin: 0 0.15rem;
+    transition: var(--transition);
+}
+.edit-btn {
+    color: var(--clr-green-light);
+}
+.edit-btn:hover {
+    color: var(--clr-green-dark);
+}
+.delete-btn {
+    color: var(--clr-red-light);
+}
+.delete-btn:hover {
+    color: var(--clr-red-dark);
+}
+.clear-btn {
+    text-transform: capitalize;
+    width: 10rem;
+    height: 1.5rem;
+    display: grid;
+    align-items: center;
+    background: transparent;
+    border-color: transparent;
+    color: var(--clr-red-light);
+    margin: 0 auto;
+    font-size: 0.85rem;
+    letter-spacing: var(--spacing);
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1.25rem;
+}
+.clear-btn:hover {
+    color: var(--clr-red-dark);
 }
