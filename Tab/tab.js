@@ -2,6 +2,9 @@ const btns = document.querySelectorAll('.tab-btn');
 const about = document.querySelector('.about');
 const contents = document.querySelectorAll('.content');
 
+/**target the container. use dataset property to target the buttons.
+ * set same id property for dataset and the content container.
+  */
 about.addEventListener('click', function(e){
     const id = e.target.dataset.id;
     if (id){
