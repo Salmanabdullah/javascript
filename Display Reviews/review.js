@@ -1,4 +1,4 @@
-//set an array for the reviewers
+//set an array of the reviewers information
 const reviews = [
     {
         id:1,
@@ -28,7 +28,8 @@ const reviews = [
         voluptates iste magnam consequatur.",
     },
 ]
-//define variables for reviewers
+
+//define variables
 const img = document.getElementById("person-img");
 const author = document.getElementById("author");
 const job = document.getElementById("job");
@@ -67,3 +68,34 @@ previousBtn.addEventListener('click', function(){
     }
     findPerson(item);
 })
+
+/***********another way********* */
+// let item = 0;
+
+// window.addEventListener('DOMContentLoaded', findPerson(item));
+// nextBtn.addEventListener('click', nextPerson)
+// previousBtn.addEventListener('click', previousPerson)
+
+// function findPerson(person){
+//     const items = reviews[person];
+//     img.src = items.img;
+//     author.textContent = items.author;
+//     job.textContent = items.job;
+//     info.textContent = items.info;
+// }
+
+// function nextPerson(){
+//     item++;
+//     if (item >reviews.length - 1){
+//         item = 0;
+//     }
+//     findPerson(item);
+// }
+
+// function previousPerson(){
+//     item--;
+//     if (item < 0){
+//         item = reviews.length - 1;
+//     }
+//     findPerson(item);
+// }
