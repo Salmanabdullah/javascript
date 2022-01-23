@@ -7,7 +7,7 @@ const container = document.querySelector('.grocery-container');
 const list = document.querySelector('.grocery-list');
 const clearBtn = document.querySelector('.clear-btn');
 
-//edit option
+//edit option. This variables are used in edit item section
 let editFlag = false;
 let editElement;
 let editID='';
@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded',setupItems);
 
 //*******functions*************
 function addItem(e){
+// By default submit button requires a server. to prevent this use preventDefault()
     e.preventDefault();
     const value = grocery.value;
     const id = new Date().getTime().toString();
