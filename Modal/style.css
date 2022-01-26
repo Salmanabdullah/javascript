@@ -157,6 +157,7 @@ main {
     modal
 ===============
 */
+
 .hero {
   min-height: 100vh;
   background: url("./hero_image.jpg") center/cover no-repeat;
