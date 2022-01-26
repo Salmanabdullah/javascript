@@ -39,7 +39,7 @@ const info = document.getElementById("info");
 const previousBtn = document.querySelector(".previous-btn");
 const nextBtn = document.querySelector(".next-btn");
 
-//set event listener using DOMContentLoaded
+//set Event listener using DOMContentLoaded
 let item = 0;
 window.addEventListener("DOMContentLoaded", function(){
     findPerson(item);
@@ -60,14 +60,15 @@ nextBtn.addEventListener('click', function(){
         item = 0;
     }
     findPerson(item);
-    })
+    });
+    
 previousBtn.addEventListener('click', function(){
     item--;
     if (item < 0){
         item = reviews.length - 1;
     }
     findPerson(item);
-})
+});
 
 /***********another way********* */
 // let item = 0;
