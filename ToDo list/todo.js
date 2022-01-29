@@ -9,7 +9,7 @@ const search = document.querySelector('.search input')
 
 addForm.addEventListener('submit', e => {
     e.preventDefault();
-    const newTodo = addForm.add.value.trim()
+    const newTodo = addForm.add.value.trim().toLowerCase()
     if(newTodo.length){
         addTodo(newTodo)
         addForm.reset()
@@ -25,7 +25,7 @@ list.addEventListener('click', e => {
 })
 /**keyup event listens to any keyboard press and fires. */
 search.addEventListener('keyup', ()=> {
-    const term = search.value.trim()
+    const term = search.value.trim().toLowerCase()
     filterTodos(term)
 })
 
