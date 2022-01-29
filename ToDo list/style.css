@@ -1,0 +1,21 @@
+body{
+    background:#54616b ;
+}
+.container{
+    max-width: 400px;
+}
+.delete{
+    cursor: pointer;
+}
+input[type=text],
+input[type=text]:focus{
+    color: white;
+    border: none;
+    background: rgba(0,0,0,0.2);
+}
+.todos li{
+    background: rgb(181, 218, 243);
+}
+.filtered{
+    display: none !important;
+}
