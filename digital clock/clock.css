@@ -1,20 +1,24 @@
-
+body{
+    background:rgb(60, 69, 95);
+}
 #banner{
-    color:#cbb2ca ;
-    background-color:#7b3c58 ;
-    width: 50%;
-    font-size: 80px;
+    color:#f4f8f8 ;
+    width: 70vw;
+    font-size: 3rem;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 10% auto 0%;
+    margin: 10% auto 10%;
 }
 
 #clock{
-background-color: #46afd7;
-color: white;
-width: 50%;
-font-size: 120px;
+color: rgb(215, 236, 22);
+width: 50vw;
+font-size: 4rem;
 padding: 0.5em 0em;
 margin: 0px auto;
 text-align: center;
+}
+#clock span {
+    padding: 20px ;
+    background: rgb(74, 84, 116);
 }
