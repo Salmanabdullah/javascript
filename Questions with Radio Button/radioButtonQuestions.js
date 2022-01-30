@@ -16,7 +16,8 @@ function collectAnswers(e){
         if(answer ===correctAnswers[index]){
             score += 20;
         }
-        scrollTo(0,0)
+        // can use scrollTop() instead while using jQuery
+        scrollTo(0,0);
         result.classList.remove('d-none');
         displayAnimation();
     });
