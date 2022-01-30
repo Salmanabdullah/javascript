@@ -7,26 +7,25 @@ body{
 #container{
     width: 600px;
     height: 300px;
-    background-color: #00ffff;
-    margin: auto;
+    align-items: center;
+    background-color: rgb(203, 209, 209,0.5);
+    margin: 10% auto;
     border-radius: 30px;
 }
 
 h1{
     font-size: 47px;
     font-weight: 600;
-    color: white;
-    margin-bottom: 0px;
-    margin-left: 170px;
+    color: rgb(73, 62, 62);
+    text-align: center;
     padding: 10px;
-    border-radius: 5px;
-    background-color: #0000ff;
-    display: inline-block;
+    border-radius: 30px;
+    background-color: rgb(164, 164, 170,0.2);
+    display: grid;
 }
 
 #weekday{
     font-size: 60px;
     color: black;
     text-align: center;
-   
 }
