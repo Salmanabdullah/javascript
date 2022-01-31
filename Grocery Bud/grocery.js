@@ -20,6 +20,8 @@ clearBtn.addEventListener('click',clearItems);
 //display items onload
 window.addEventListener('DOMContentLoaded',setupItems);
 
+/*****.value access the value of a property
+ *Date is built-in function. toString convert data types to string*/
 //*******functions*************
 function addItem(e){
 // By default submit button requires a server. to prevent this use preventDefault()
@@ -66,7 +68,9 @@ function setBackToDefault(){
     editFlag = false;
     submitBtn.textContent = 'submit';
 }
-
+/***removeChild() removes child element. 
+ * LocalStorage is a built-in function
+  */
 //clear items function
 function clearItems(){
     const items = document.querySelectorAll('.grocery-item');
