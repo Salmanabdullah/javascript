@@ -53,6 +53,7 @@ function findPerson(person){
     job.textContent = items.job;
     info.textContent = items.info;
 }
+
 //set what next-btn and pervious-btn will do
 nextBtn.addEventListener('click', function(){
     item++;
