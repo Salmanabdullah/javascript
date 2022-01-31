@@ -9,7 +9,7 @@ navToggle.addEventListener('click', function(){
     // } else {
     //     links.classList.add('show-links');
     // }
-    // or in one line
     links.classList.toggle('show-links');
 });
-
+/**toggle means onClick will add something and if clicked again it will remove it like flipping a card
+ */
