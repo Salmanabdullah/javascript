@@ -1,5 +1,5 @@
 /****generate unnique key to access the API on "openweathermap.org". */
-const key = '14413fa25f441506260cc2e54f8355a7'
+const key = '/*the unique Key*/'
 const temp = document.querySelector('.temp')
 const detail = document.querySelector('.details')
 const form = document.querySelector('form')
