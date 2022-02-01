@@ -15,7 +15,7 @@ const reviews = [
         job:"journalist",
         img:"./img/person-2.jpg",
         info:"ipsum, dolor sit amet consectetur adipisicing \
-        elit. Modi quia, ut sed quae taka taka commodi expedita cumque \
+        elit. Modi quia, ut sed quae taka taka commodi exped \
         voluptates iste magnam consequatur.",
     },
     {
