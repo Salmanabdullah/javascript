@@ -13,17 +13,19 @@ form.addEventListener('submit',(e)=>{
         .catch(err => console.log(err))
 })
 
-
 // form.addEventListener('keyup',()=>{
 
 //     const term = form.city.value.trim()
 //     getCity(term)
-//         .then(data =>getWeather(data))
+//         .then(data =>{
+//         console.log(data);
+//         getWeather(data)})
 //         .catch(err => console.log(err))
 // })
 
 //get weather information
 function getWeather( d ) {
+    
 	var celcius = Math.round(parseFloat(d.main.temp)-273.15);
     temp.innerHTML = celcius + '&deg;c';
     const array = Array.from(detail.children);
