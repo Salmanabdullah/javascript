@@ -1,5 +1,6 @@
 /********how http request works 
  * there are 5 readystate. 0 when a request is created and 4 when its done.
+ * thats why condition is checked on 4
 */
 function getTodos(){
     const request = new XMLHttpRequest();
@@ -20,7 +21,9 @@ getTodos();
 
 
 
-/**to make request function reusable */
+/**to make request function reusable
+ * "undefined" sent as parameter when we dont want any value 
+ */
 
 function getTodos(callback){
     const request = new XMLHttpRequest();
@@ -55,6 +58,7 @@ getTodos((err,data) =>{
 
 /***********example of callback HEll. makeRequest() is called inside another
  * makeRequest. so many nested callback spoils code readability.
+ * javascript is a synchronous language
  */
 
 function makeRequest(resource, callback){
@@ -72,7 +76,8 @@ function makeRequest(resource, callback){
     request.open('GET', resource);
     request.send();
 }
-   
+
+
 /**callback inside callback, inside callback, inside callback */
 makeRequest('nantu.json',(err,data)=> {
     console.log(data);
@@ -86,7 +91,9 @@ makeRequest('nantu.json',(err,data)=> {
 
 
 
-/*****TO get rid of nested callback we use Promise */
+/*****TO get rid of nested callback we use Promise
+ * promise is a callback function which takes two params (resolve and reject)
+ */
 
 function makeRequest(resource){
     return new Promise((resolve, reject)=>{
