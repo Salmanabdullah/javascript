@@ -1,4 +1,6 @@
-/********how http request works */
+/********how http request works 
+ * there are 5 readystate. 0 when a request is created and 4 when its done.
+*/
 function getTodos(){
     const request = new XMLHttpRequest();
     
