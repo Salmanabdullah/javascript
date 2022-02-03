@@ -1,3 +1,15 @@
+body{
+    font-size: 1.5em;
+    background: rgb(204, 221, 202);
+}
 .container{
-    max-width: 500px;
+    max-width: 600px;
+    background: rgb(212, 226, 211, 0.8);
+}
+.details{
+    background: rgb(98, 104, 102);
+    color: rgb(210, 230, 226);
+}
+.details{
+    letter-spacing: 0.1em;
 }
