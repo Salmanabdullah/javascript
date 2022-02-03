@@ -1,7 +1,23 @@
-/********how http request works 
- * there are 5 readystate. 0 when a request is created and 4 when its done.
- * thats why condition is checked on 4
-*/
+/********how http request works */
+const request = new XMLHttpRequest();
+    
+request.addEventListener('readystatechange', () => {
+    if(request.readyState === 4 && request.status === 200 ){
+        console.log(request.responseText);
+    } else if (request.readyState === 4){
+        console.log('Could not fetch any data');
+    }
+})
+
+request.open('GET','https://jsonplaceholder.typicode.com/todos/');
+request.send();
+
+
+
+/**to make request reusable, we declared it into a function
+ * there are 4 readystate. 1 when a request is created and 4 when its done.
+thats why condition is checked on 4*/
+
 function getTodos(){
     const request = new XMLHttpRequest();
     
@@ -21,8 +37,7 @@ getTodos();
 
 
 
-/**to make request function reusable
- * "undefined" sent as parameter when we dont want any value 
+/*** "undefined" sent as parameter when we dont want any value 
  */
 
 function getTodos(callback){
