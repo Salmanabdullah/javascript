@@ -3,13 +3,24 @@ const key = config.MY_API_TOKEN;
 const temp = document.querySelector('.temp')
 const detail = document.querySelector('.details')
 const form = document.querySelector('form')
+const card = document.querySelector('.card')
+// const time = document.querySelector('img.time')
+// const icon = document.querySelector('.icon img')
 
 form.addEventListener('submit',(e)=>{
+    //prevent default behaviour
     e.preventDefault();
+
+    //get city value
     const term = form.city.value.trim()
     form.reset();
+
+    //display on UI
     getCity(term)
-        .then(data =>getWeather(data))
+        .then(data =>{
+            // console.log(data);
+            card.classList.remove('d-none')
+            getWeather(data)})
         .catch(err => console.log(err))
 })
 
@@ -25,9 +36,13 @@ form.addEventListener('submit',(e)=>{
 
 //get weather information
 function getWeather( d ) {
-    
+    //get temparature
 	let celcius = Math.round(parseFloat(d.main.temp)-273.15);
     temp.innerHTML = celcius + '&deg;c';
+    // let date = new Date().getTime();
+    // date = Math.round(date / 1000);
+    //get city name and weather conditioin
+    console.log(d);
     const array = Array.from(detail.children);
     array[0].textContent = d.name;
     array[1].textContent = d.weather[0].main;
