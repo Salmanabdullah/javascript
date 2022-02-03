@@ -26,7 +26,7 @@ form.addEventListener('submit',(e)=>{
 //get weather information
 function getWeather( d ) {
     
-	var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+	let celcius = Math.round(parseFloat(d.main.temp)-273.15);
     temp.innerHTML = celcius + '&deg;c';
     const array = Array.from(detail.children);
     array[0].textContent = d.name;
