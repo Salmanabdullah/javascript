@@ -50,18 +50,39 @@ class User{
     logout(){
         console.log(`${this.username} logged out`);
     }
+    scoreIncrement(){
+        this.score += 1
+        console.log(`${this.username} has a score of ${this.score}`);
+        return this;
+    }
 }
 
 const userThree = new User('Salman');
 const userFour = new User('Abdullah');
+/****the new keyword does 3 things
+ * it creates a new empty object {}
+ * it binds the value of 'this' to the new empty object
+ * it calls the constructor function to 'build' the object
+ */
 
 console.log(userThree, userFour);
 userThree.login()
 userThree.logout()
 userFour.login()
 userFour.logout()
-/****the new keyword does 3 things
- * it creates a new empty object {}
- * it binds the value of 'this' to the new empty object
- * it calls the constructor function to 'build' the object
+
+userThree.scoreIncrement().logout()
+/*****we can chain the methods if only a method will return that object (return this).
+ * scoreIncrement method return this object 
+ * so it can chain with any other method of that object such as login or logout*/
+
+/******class inheritance or subClasses
+ * subClass extends another class, also subclass may have some extra properties and methods
  */
+class Admin extends User{
+
+}
+
+const userFive = new Admin('Salman')
+
+console.log(userFive);
