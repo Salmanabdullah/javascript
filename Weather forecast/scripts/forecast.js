@@ -22,7 +22,19 @@ form.addEventListener('submit',(e)=>{
             card.classList.remove('d-none')
             getWeather(data)})
         .catch(err => console.log(err))
+    
+    //set local storage
+    localStorage.setItem('city',term)
 })
+
+//fetch data from local storage if available
+if(localStorage.getItem('city')){
+    getCity(localStorage.getItem('city'))
+        .then(data => {
+            card.classList.remove('d-none')
+            getWeather(data)})
+        .catch(err => console.log(err))
+}
 
 // form.addEventListener('keyup',()=>{
 
