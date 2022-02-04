@@ -24,6 +24,10 @@ const userTwo = {
     logout: function(){
         console.log('user 2 is logged out')
     },
+    //shorthand of a function is
+    live(){
+        console.log('go live now')
+    }
 }
 
 console.log(userTwo.username);
@@ -39,13 +43,23 @@ class User{
         //set up properties
         this.username = userName
     }
+    /***constructor is used only to declare properties. functions are declared after the constructor */
+    login(){
+        console.log(`${this.username} just logged in`);
+    }
+    logout(){
+        console.log(`${this.username} logged out`);
+    }
 }
 
 const userThree = new User('Salman');
 const userFour = new User('Abdullah');
 
-console.log(userThree);
-console.log(userFour);
+console.log(userThree, userFour);
+userThree.login()
+userThree.logout()
+userFour.login()
+userFour.logout()
 /****the new keyword does 3 things
  * it creates a new empty object {}
  * it binds the value of 'this' to the new empty object
