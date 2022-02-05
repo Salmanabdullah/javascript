@@ -80,9 +80,30 @@ userThree.scoreIncrement().logout()
  * subClass extends another class, also subclass may have some extra properties and methods
  */
 class Admin extends User{
-
+    deleteUser(user){
+        users = users.filter((e)=>{
+            return e.username !== user.username
+        })
+    }
 }
 
-const userFive = new Admin('Salman')
+const admin = new Admin('Salman')
+console.log(admin);
 
-console.log(userFive);
+let users = [userThree,userFour,admin]
+console.log(users); //returns [User,User,Amin]
+/******deleteUser() method is only belongs to admin class not on the parent 'User' class */
+admin.deleteUser(userThree)
+console.log(users); //returns [User,Admin]
+
+/*****add additional properties to a  subclass
+ * parent class properties should resides in super() as params also in the constructor()
+ */
+class AdminOne extends User{
+    constructor(username,title){
+        super(username)
+        this.title = title
+    }
+}
+
+const adminOne = new AdminOne('Salman','Dr.')
