@@ -1,0 +1,8 @@
+.container{
+    max-width: 600px;
+    text-transform: capitalize;
+}
+.para{
+    text-transform: none !important;
+    font-size: 1.1em;
+}
