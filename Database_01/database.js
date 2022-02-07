@@ -3,13 +3,27 @@ const list = document.querySelector('ul')
 const form = document.querySelector('form')
 
 //calling from firebase database, get documents
-db.collection('recipes').get().then(snapshot =>{
-    snapshot.docs.forEach(element => {
-        addRecipe(element.data(), element.id)
-    });
-}).catch(err => console.log(err))
+// db.collection('recipes').get().then(snapshot =>{
+//     snapshot.docs.forEach(element => {
+//         addRecipe(element.data(), element.id)
+//     });
+// }).catch(err => console.log(err))
 
-/*******functions */ 
+//get realtime data
+db.collection('recipes').onSnapshot(snapshot => {
+    snapshot.docChanges().forEach(change => {
+        const changeDoc = change.doc;
+        if(change.type === 'added'){
+            addRecipe(changeDoc.data(), changeDoc.id)
+        } else if (change.type === 'removed'){
+            deleteRecipe(changeDoc.id)
+        }
+    })
+})
+
+
+/*******functions *************/ 
+//to add a new recipe
 function addRecipe(item, id){
     let time = item.created_at.toDate();
     let html = `
@@ -21,7 +35,18 @@ function addRecipe(item, id){
     `;
     list.innerHTML += html
 }
-//add documents
+
+//to delete a recipe
+function deleteRecipe(id){
+    const fullList = document.querySelectorAll('li')
+    fullList.forEach(list => {
+        if(list.getAttribute('data-id') === id){
+            list.remove();
+        }
+    })
+}
+
+//adding documents
 form.addEventListener('submit', e => {
     e.preventDefault();
     const now = new Date();
@@ -36,7 +61,7 @@ form.addEventListener('submit', e => {
     }).catch(err => console.log(err))
 })
 
-//deleting data
+//deleting documents
 list.addEventListener('click', e =>{
     if(e.target.tagName === 'BUTTON'){
         const id = e.target.parentElement.getAttribute('data-id');
