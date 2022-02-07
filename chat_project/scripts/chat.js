@@ -18,7 +18,10 @@ class Chatroom{
         return addToDatabase;
     }
     getchats(callback){
-        this.chats.onSnapshot(snapshot => {
+        this.chats
+        .where('room','==',this.room)                   //to set a condition
+        .orderBy('created_at') 
+        .onSnapshot(snapshot => {
             snapshot.docChanges().forEach(change => {
                 const changeDoc = change.doc;
                 if(change.type === 'added'){
@@ -32,7 +35,7 @@ class Chatroom{
 
 const chatroom = new Chatroom('gaming','salman');
 
-// chatroom.addChat('knock on the door')
+// chatroom.addChat('are you there!')
 //     .then(() => console.log('chat added'))
 //     .catch(err => console.log(err))
 
