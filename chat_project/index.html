@@ -10,11 +10,11 @@
 </head>
 <body>
     <!-- container & title -->
-<div class="container text-center">
-    <h1 class="my-5">cactus chat</h1>
+<div class="container">
+    <h1 class="my-5 text-center text-capitalize">cactus chat</h1>
     
     <!-- hashTag buttons -->
-    <div class="hasTagButtons mb-3" >
+    <div class="hasTagButtons mb-3 text-center" >
         <p class="para my-2">Choose a chatroom:</p>
         <button class="btn btn-info text-capitalize" id="general">#general</button>
         <button class="btn btn-info text-capitalize" id="gaming">#gaming</button>
@@ -27,7 +27,7 @@
     </div>
     <!-- new chat form -->
     <form class="new-chat my-3">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 text-capitalize">
             <span class="input-group-text">your message:</span>
             <input type="text" class="form-control" id="message">
             <input type="submit" class="btn btn-primary" value="Send">
@@ -45,15 +45,15 @@
     <!-- update name form -->
 
     <form class="new-name my-3">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 text-capitalize">
             <span class="input-group-text">update name:</span>
-            <input type="text" class="form-control" id="name">
+            <input type="text" class="form-control" id="name" required>
             <input type="submit" class="btn btn-primary" value="Update">
         </div>
-        <div class="update-alert"></div>
+        <div class="update-alert text-center text-success"></div>
     </form>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
     <script src="scripts/config.js"></script>
