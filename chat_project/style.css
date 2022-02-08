@@ -1,8 +1,16 @@
 .container{
     max-width: 600px;
-    text-transform: capitalize;
 }
 .para{
     text-transform: none !important;
     font-size: 1.1em;
+}
+.username{
+    font-weight: bold;
+    margin-right: 10px;
+    text-transform: capitalize;
+}
+.time{
+    font-size: 0.6em;
+    text-transform: lowercase;
 }
