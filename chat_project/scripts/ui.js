@@ -2,6 +2,8 @@ class ChatUI{
     constructor(list){
         this.list = list
     }
+
+    /***dateFns is used to show how long ago the post has been made */
     render(data){
         const submitTime = dateFns.distanceInWordsToNow(
             data.created_at.toDate(),
