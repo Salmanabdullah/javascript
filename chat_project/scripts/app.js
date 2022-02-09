@@ -21,17 +21,17 @@ newName.addEventListener('submit', e => {
     const name = newName.name.value.trim();
     chatroom.updateName(name)
     newName.reset();
-    alert.textContent =`Username updated to ${name}`
-    setTimeout(() => {alert.textContent = ''},3000)
+    alert.textContent =`Username updated to ${name}`;
+    setTimeout(() => {alert.textContent = ''},3000)         //how long the alert will be visible
     
 })
 
 //selecting rooms
 btn.addEventListener('click', e => {
     if(e.target.tagName === 'BUTTON'){
-        chatUI.clear();
-        chatroom.updateRoom(e.target.getAttribute('id'))
-        chatroom.getchats(data => chatUI.render(data))
+        chatUI.clear();                                  //clear the list
+        chatroom.updateRoom(e.target.getAttribute('id'))    //then change rooms as user clicks
+        chatroom.getchats(data => chatUI.render(data))      //get data of that room
     }
     
 })
