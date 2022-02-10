@@ -26,7 +26,7 @@ newName.addEventListener('submit', e => {
     
 })
 
-//selecting rooms
+//selecting rooms. Event delegation
 btn.addEventListener('click', e => {
     if(e.target.tagName === 'BUTTON'){
         chatUI.clear();                                  //clear the list
@@ -36,7 +36,7 @@ btn.addEventListener('click', e => {
     
 })
 
-//check local storage
+//check local storage. ternary operator
 const initialName = localStorage.username ? localStorage.username : 'stranger';
 
 
