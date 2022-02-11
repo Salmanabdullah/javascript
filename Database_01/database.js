@@ -22,29 +22,7 @@ db.collection('recipes').onSnapshot(snapshot => {
 })
 
 
-/*******functions *************/ 
-//to add a new recipe
-function addRecipe(item, id){
-    let time = item.created_at.toDate();
-    let html = `
-    <li data-id = ${id}>
-    <div>${item.title}</div>
-    <div>${time}</div>
-    <button class = "btn btn-danger btn-sm my-2">delete</button>
-    </li>
-    `;
-    list.innerHTML += html
-}
 
-//to delete a recipe
-function deleteRecipe(id){
-    const fullList = document.querySelectorAll('li')
-    fullList.forEach(list => {
-        if(list.getAttribute('data-id') === id){
-            list.remove();
-        }
-    })
-}
 
 //adding documents
 form.addEventListener('submit', e => {
@@ -69,3 +47,27 @@ list.addEventListener('click', e =>{
             .delete().then(()=> console.log('recipe deleted'))
     }
 })
+
+/*******functions *************/ 
+//to add a new recipe
+function addRecipe(item, id){
+    let time = item.created_at.toDate();
+    let html = `
+    <li data-id = ${id}>
+    <div>${item.title}</div>
+    <div>${time}</div>
+    <button class = "btn btn-danger btn-sm my-2">delete</button>
+    </li>
+    `;
+    list.innerHTML += html
+}
+
+//to delete a recipe
+function deleteRecipe(id){
+    const fullList = document.querySelectorAll('li')
+    fullList.forEach(list => {
+        if(list.getAttribute('data-id') === id){
+            list.remove();
+        }
+    })
+}
