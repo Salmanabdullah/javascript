@@ -1,4 +1,4 @@
-//dom queries
+//dom queries 
 const chatList = document.querySelector('.chat-list')
 const newChat = document.querySelector('.new-chat')
 const newName = document.querySelector('.new-name')
